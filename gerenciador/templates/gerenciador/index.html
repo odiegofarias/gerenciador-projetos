@@ -16,7 +16,15 @@
             <a class="navbar-brand" href="#">Navbar</a>
         </div>
     </nav>
+    
 
+    {% for projeto in projetos  %}
+        {{ projeto.titulo }} <br>
+        {{ projeto.descricao }} <br>
+        {{ projeto.explicacao }} <br>
+        {{ projeto.autor }} <br>
+        {{ projeto.criado_em }} <br><br>
+    {% endfor %}
       <script src="{% static 'global/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>

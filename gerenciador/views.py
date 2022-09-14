@@ -1,7 +1,14 @@
 from django.shortcuts import render
+from .models import Projeto
 
 
 
 def index(request):
-    return render(request, 'gerenciador/index.html')
+    projetos = Projeto.objects.all()
+
+    return render(
+        request,
+        'gerenciador/index.html', {
+        'projetos': projetos,
+        })
 
